@@ -1,0 +1,10 @@
+source:
+  repo:
+    kind: HELM
+    url: https://stakater.github.io/stakater-charts
+target:
+  repo:
+    kind: CHARTMUSEUM
+    url: http://localhost:8080/stakater
+charts:
+  - reloader

@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  chartmuseum:
+    image: ghcr.io/helm/chartmuseum:v0.15.0
+    ports:
+      - 127.0.0.1:8080:8080
+    environment:
+      STORAGE: local
+      STORAGE_LOCAL_ROOTDIR: /var/charts
+      DEPTH: 1
+      # DEPTH_DYNAMIC: "true"
+      DEBUG: "true"
+      ALWAYS_REGENERATE_CHART_INDEX: "true"
+      DISABLE_API: "false"
+    volumes:
+      - ./var/charts:/var/charts

@@ -1,0 +1,10 @@
+source:
+  repo:
+    kind: HELM
+    url: https://aws.github.io/eks-charts
+target:
+  repo:
+    kind: CHARTMUSEUM
+    url: http://localhost:8080/eks
+charts:
+  - aws-load-balancer-controller
